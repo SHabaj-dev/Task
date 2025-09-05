@@ -1,0 +1,82 @@
+# Android/Gradle build outputs
+.gradle/
+build/
+**/build/
+.cxx/
+.externalNativeBuild/
+
+# IDE/editor settings
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+.vscode/
+.fleet/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local configuration
+local.properties
+gradle.properties.local
+keystore.properties
+.env
+.env.*
+
+# Google/Firebase config (keep secrets out of VCS)
+app/google-services.json
+google-services.json
+GoogleService-Info.plist
+
+# Signing keys and certificates
+*.jks
+*.keystore
+*.pem
+*.p12
+*.cer
+*.key
+
+# APK/AAB and other packaged artifacts
+*.apk
+*.ap_*
+*.aab
+*.ipa
+
+# Logs & reports
+*.log
+logs/
+captures/
+
+# Generated resources/outputs caches
+.navigation/
+**/generated/
+**/intermediates/
+**/outputs/
+**/tmp/
+
+# Lint/analysis caches
+.lint/
+lint/intermediates/
+lint/generated/
+
+# Kotlin/Java build caches
+.kotlin/
+kotlinc/
+
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
