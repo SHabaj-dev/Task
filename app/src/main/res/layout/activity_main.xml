@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icCoin"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:elevation="2dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_coin" />
+
+
+        <LinearLayout
+            android:id="@+id/layoutCoins"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="6dp"
+            android:layout_marginStart="@dimen/small_margin"
+            android:background="@drawable/bg_coins_bar"
+            android:gravity="end|center"
+            android:paddingHorizontal="@dimen/small_margin"
+            app:layout_constraintBottom_toBottomOf="@id/icCoin"
+            app:layout_constraintDimensionRatio="85:28"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/icCoin">
+
+            <TextView
+                android:id="@+id/tvUserCoins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/riffic"
+                android:text="00000"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color_brown" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutLightning"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="6dp"
+            android:layout_marginStart="@dimen/small_margin"
+            android:background="@drawable/bg_lightning_bar"
+            android:gravity="end|center"
+            android:paddingHorizontal="@dimen/small_margin"
+            app:layout_constraintBottom_toBottomOf="@id/icCoin"
+            app:layout_constraintDimensionRatio="56:28"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/icCoin">
+
+            <TextView
+                android:id="@+id/tvUserLightning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/riffic"
+                android:text="20"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color_brown" />
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="-36dp"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/layoutLightning"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_lightning" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutMegaOffer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="22dp"
+        android:layout_marginTop="@dimen/large_margin"
+        android:background="@drawable/bg_gradient_box"
+        app:layout_constraintStart_toStartOf="@id/toolBar"
+        app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+
+        <TextView
+            android:id="@+id/tvMegaOffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/riffic"
+            android:text="Mega Offer"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_margin="@dimen/common_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ProgressBar
+            android:id="@+id/customProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_margin="@dimen/common_margin"
+            android:indeterminate="false"
+            android:max="27"
+            android:progress="4"
+            android:progressDrawable="@drawable/custom_progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="94:19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMegaOffer" />
+
+
+        <TextView
+            android:id="@+id/tvProgressStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/riffic"
+            android:text="4/27"
+            android:textColor="@color/text_color_blue"
+            app:layout_constraintBottom_toBottomOf="@id/customProgressBar"
+            app:layout_constraintEnd_toEndOf="@id/customProgressBar"
+            app:layout_constraintStart_toStartOf="@id/customProgressBar"
+            app:layout_constraintTop_toTopOf="@id/customProgressBar" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/ic_coin_stack"
+            android:scaleType="fitEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/customProgressBar"
+            android:layout_marginStart="@dimen/small_margin"
+            app:layout_constraintDimensionRatio="1:1"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="250dp"
+        android:layout_height="65dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_button_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="@dimen/large_margin"
+        android:layout_marginBottom="40dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
